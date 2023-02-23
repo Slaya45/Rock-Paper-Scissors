@@ -1,0 +1,14 @@
+* {
+    text-align: center;
+    background-color: antiquewhite;
+}
+#computerChoice-el{
+    font-size: 75px;
+    font-weight: bolder;
+    color: rgb(126, 0, 0);
+}
+#playerChoice-el{
+    font-size: 75px;
+    font-weight: bolder;
+    color: rgb(20, 0, 202);
+}

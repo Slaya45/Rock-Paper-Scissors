@@ -2,13 +2,14 @@
     text-align: center;
     background-color: antiquewhite;
 }
-#computerChoice-el{
-    font-size: 75px;
-    font-weight: bolder;
-    color: rgb(126, 0, 0);
+Button{
+    width: 200px;
+    height: 40px;
+    color: aliceblue;
+    background-color: black;
+    font-size: 20px;
 }
-#playerChoice-el{
-    font-size: 75px;
-    font-weight: bolder;
-    color: rgb(20, 0, 202);
+p{
+    font-size: 86px;
+
 }

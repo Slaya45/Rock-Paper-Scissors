@@ -1,24 +1,14 @@
 
 
-let computer = "00"
+
+const computerChoice = document.getElementById("computerChoice")
+const playerChoice = document.getElementById("playerChoice")
+const result = document.getElementById("result")
+const possibleChoices = document.querySelector ("button")
+
+let computer = 0
 let player = 0
-let computerEL = document.getElementById("computerChoice-el")
-let playerEL = document.getElementById("playerChoice-el")
 
 
 
 
-
-
-
-function compChoice() {
-  computerEL.textContent = "Computer" + " " + computer
-  
-
-}
-
-function startGame() {
-  let playerChoice =  "rock"
-  let computerChoice = compChoice()
-}
-console.log (compChoice)

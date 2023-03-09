@@ -7,9 +7,10 @@ let resultEl = document.getElementById("result-el")
 const possibleChoices = document.querySelector ("button-el")
 let message = " "
 let playerMessage = " "
-let playerNumber = []
-let randomComputerChoices = []
-
+let playerChoice = " "
+let randomComputerChoices = " " 
+let playerScore = "Player Score" +  " " + 0
+let computerScore = "Computer Score" +  " " + 0
 
 function computerChoice(){
     let randomComputerChoices =  Math.floor( Math.random() * 3) + 1
@@ -23,26 +24,29 @@ function computerChoice(){
         computerChoiceEl.textContent = "Computer:" + " " + "Paper"
         randomComputerChoices = "Paper"
     }
-    result()
-console.log (message)
+        result()
+        console.log (message)
+        console.log(randomComputerChoices)
+       
 }
 
 function buttonPaper(){
-    playerNumber =  "Rock"
+    playerChoice =  "Rock"
     playerMessage = "Player:" + " " + "Rock"
     playerChoiceEl.textContent = playerMessage
 
     console.log(playerMessage)
+    
 }
 function buttonRock(){
-    playerNumber = "Scissors"
+    playerChoice = "Scissors"
     playerMessage = "Player:" + " " + "Scissors"
     playerChoiceEl.textContent = playerMessage
     
     console.log(playerMessage)
 }
 function buttonScissors(){
-    playerNumber = "Paper"
+    playerChoice = "Paper"
     playerMessage = "Player:" + " " + "Paper"
     playerChoiceEl.textContent = playerMessage
     
@@ -51,40 +55,40 @@ function buttonScissors(){
 
 function result(){
     
-    if (randomComputerChoices === playerNumber){
+    if (randomComputerChoices === playerChoice){
         resultEl.textContent = "Result:" + " " + "Tie!"
-    }else if(playerNumber == 'rock'){
-        if(computer == 'paper'){
-            result.textContent = 'Computer Won';
+    }else if(playerChoice == "rock"){
+        if(randomComputerChoices == "paper"){
+            resultEl.textContent = "Computer Won";
             computerScore++;
-            computerScoreBoard.textContent = computerScore;
+            computerScoreBoardEl.textContent = computerScore;
 
         }else{
-            result.textContent = 'Player Won'
+            resultEl.textContent = "Player Won"
             playerScore++;
-            playerScoreBoard.textContent = playerScore;
+            playerScoreBoardEl.textContent = playerScore;
         }
     }
-    else if(player == 'scissors'){
-        if(computer == 'rock'){
-            result.textContent = 'Computer Won';
+    else if(playerChoice == "scissors"){
+        if(randomComputerChoices == 'rock'){
+            resultEl.textContent = "Computer Won";
             computerScore++;
-            computerScoreBoard.textContent = computerScore;
+            computerScoreBoardEl.textContent = computerScore;
         }else{
-            result.textContent = 'Player Won';
+            resultEl.textContent = "Player Won";
             playerScore++;
-            playerScoreBoard.textContent = playerScore;
+            playerScoreBoardEl.textContent = playerScore;
         }
     }
-    else if(player == 'paper'){
-        if(computer == 'scissors'){
-            result.textContent = 'Computer Won';
+    else if(playerChoice == "paper"){
+        if(randomComputerChoices == "scissors"){
+            resultEl.textContent = "Computer Won";
             computerScore++;
-            computerScoreBoard.textContent = computerScore;
+            computerScoreBoardEl.textContent = computerScore;
         }else{
-            result.textContent = 'Player Won';
+            resultEl.textContent = "Player Won";
             playerScore++;
-            playerScoreBoard.textContent = playerScore;
+            playerScoreBoardEl.textContent = playerScore;
         }
     }
 }

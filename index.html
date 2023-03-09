@@ -9,13 +9,14 @@
 
     <body>
 
-      <p id="computerChoice">Computer:</p>
-      <p id="playerChoice">Player:</p>
-      <p id="result">Result:</p>
-      <button id="rock">ROCK</button>
-      <button id="paper">PAPER</button>
-      <button id="scissors">SCISSORS</button>
-
+      <p id= "computerChoice-el">Computer:</p>
+      <p id= "playerChoice-el">Player:</p>
+      <p id= "result-el">Result:</p>
+      <button onclick = "computerChoice(); buttonRock()" id= "rock-el">SCISSORS</button>
+      <button onclick = "computerChoice(); buttonPaper()" id= "paper-el">ROCK</button>
+      <button onclick = "computerChoice(); buttonScissors()" id= "scissors-el">PAPER</button>
+      <p id="playerScoreBoard-el">Your Score:</p>
+      <p id="ComputerScoreBoard-el">Computer Score:</p>
        
         <script src="index.js"></script>
 

@@ -11,5 +11,7 @@ Button{
 }
 p{
     font-size: 86px;
+    padding: 2px;
+    margin: 20px;
 
 }

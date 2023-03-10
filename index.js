@@ -69,8 +69,8 @@ function result(){
             playerScoreBoardEl.textContent = "Your Score: " + playerScore;
         }
     }
-    else if(playerChoice == "Rock"){
-        if(randomComputerChoices == "Scissors"){
+    else if(playerChoice == "Scissors"){
+        if(randomComputerChoices == "Rock"){
             resultEl.textContent = "Computer Won";
             computerScore++;
             computerScoreBoardEl.textContent = "Computer Score: " + computerScore;

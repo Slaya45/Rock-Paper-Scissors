@@ -5,75 +5,76 @@ let computerChoiceEl = document.getElementById("computerChoice-el")
 let playerChoiceEl = document.getElementById("playerChoice-el")
 let resultEl = document.getElementById("result-el")
 
-let playerChoice = ""
-let randomComputerChoices = "" 
+let playerChoice = " "
+let randomComputerChoices = " " 
 let playerScore = 0
 let computerScore = 0
 
 
-function buttonPaper(){
+function buttonRock(){
     playerChoice =  "Rock"
     playerChoiceEl.textContent = "Player:" + " " + "Rock"
     computerChoice()
-    
-}
-function buttonRock(){
-    playerChoice = "Scissors"
-    playerChoiceEl.textContent = "Player:" + " " + "Scissors"
-    computerChoice()
+    result()
     
 }
 function buttonScissors(){
+    playerChoice = "Scissors"
+    playerChoiceEl.textContent = "Player:" + " " + "Scissors"
+    computerChoice() 
+    result()
+}
+
+function buttonPaper(){
     playerChoice = "Paper"
     playerChoiceEl.textContent = "Player:" + " " + "Paper"
     computerChoice()
+    result()
     
 }
+
 function computerChoice(){
-    let randomComputerChoices =  Math.floor( Math.random() * 3) + 1
-       if (randomComputerChoices > 2) {
-        computerChoiceEl.textContent = "Computer:" + " " + "Rock"
-        randomComputerChoices = "Rock"
-        result()
-    } else if (randomComputerChoices === 1){
-        computerChoiceEl.textContent = "Computer:" + " " + "Scissors"
-        randomComputerChoices = "Scissors"
-        result()
-    } else {
-        computerChoiceEl.textContent = "Computer:" + " " + "Paper"
-        randomComputerChoices = "Paper"
-        result()
-    }   
+    randomComputerChoices =  Math.floor( Math.random() * 3) + 1
     
-        console.log(randomComputerChoices)
-        console.log(playerChoice)
+       if (randomComputerChoices > 2) {
+        randomComputerChoices = "Rock"
+        computerChoiceEl.textContent = "Computer:" + " " + "Rock"
+      
+    } else if (randomComputerChoices === 1){
+        randomComputerChoices = "Scissors"
+        computerChoiceEl.textContent = "Computer:" + " " + "Scissors"
+        
+    } else {
+        randomComputerChoices = "Paper"
+        computerChoiceEl.textContent = "Computer:" + " " + "Paper"
+        
+    }   
+
 }
-
-
 
 function result(){
     
     if (randomComputerChoices == playerChoice){
         resultEl.textContent = "Tie!"
-    }else if(playerChoice = "Rock"){
+
+    }else if(playerChoice == "Rock"){
         if(randomComputerChoices == "Paper"){
             resultEl.textContent = "Computer Won";
             computerScore++;
             computerScoreBoardEl.textContent = computerScore;
-
         }else{
-            resultEl.textContent == "Player Won"
+            resultEl.textContent == "Player 1 Won"
             playerScore++;
             playerScoreBoardEl.textContent = playerScore;
         }
     }
-    else if(playerChoice == "Scissors"){
-        if(randomComputerChoices == "Rock"){
+    else if(playerChoice == "Rock"){
+        if(randomComputerChoices == "Scissors"){
             resultEl.textContent = "Computer Won";
             computerScore++;
             computerScoreBoardEl.textContent = computerScore;
         }else{
-            resultEl.textContent = "Player Won";
+            resultEl.textContent = "Player 2 Won";
             playerScore++;
             playerScoreBoardEl.textContent = playerScore;
         }
@@ -84,11 +85,13 @@ function result(){
             computerScore++;
             computerScoreBoardEl.textContent = computerScore;
         }else{
-            resultEl.textContent = "Player Won";
+            resultEl.textContent = "Player 3 Won";
             playerScore++;
             playerScoreBoardEl.textContent = playerScore;
         }
     }
+    console.log(randomComputerChoices)
+    console.log(playerChoice)
 }
 
 

@@ -34,8 +34,9 @@ function buttonPaper(){
 }
 
 function computerChoice(){
+
     randomComputerChoices =  Math.floor( Math.random() * 3) + 1
-    
+
        if (randomComputerChoices > 2) {
         randomComputerChoices = "Rock"
         computerChoiceEl.textContent = "Computer:" + " " + "Rock"
@@ -61,33 +62,33 @@ function result(){
         if(randomComputerChoices == "Paper"){
             resultEl.textContent = "Computer Won";
             computerScore++;
-            computerScoreBoardEl.textContent = computerScore;
+            computerScoreBoardEl.textContent = "Computer Score: " + computerScore;
         }else{
-            resultEl.textContent == "Player 1 Won"
+            resultEl.textContent == "You Won"
             playerScore++;
-            playerScoreBoardEl.textContent = playerScore;
+            playerScoreBoardEl.textContent = "Your Score: " + playerScore;
         }
     }
     else if(playerChoice == "Rock"){
         if(randomComputerChoices == "Scissors"){
             resultEl.textContent = "Computer Won";
             computerScore++;
-            computerScoreBoardEl.textContent = computerScore;
+            computerScoreBoardEl.textContent = "Computer Score: " + computerScore;
         }else{
-            resultEl.textContent = "Player 2 Won";
+            resultEl.textContent = "You Won";
             playerScore++;
-            playerScoreBoardEl.textContent = playerScore;
+            playerScoreBoardEl.textContent = "Your Score: " + playerScore;
         }
     }
     else if(playerChoice == "Paper"){
         if(randomComputerChoices == "Scissors"){
             resultEl.textContent = "Computer Won";
             computerScore++;
-            computerScoreBoardEl.textContent = computerScore;
+            computerScoreBoardEl.textContent = "Computer Score: " + computerScore;
         }else{
-            resultEl.textContent = "Player 3 Won";
+            resultEl.textContent = "You Won";
             playerScore++;
-            playerScoreBoardEl.textContent = playerScore;
+            playerScoreBoardEl.textContent = "Your Score: " + playerScore;
         }
     }
     console.log(randomComputerChoices)

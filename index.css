@@ -10,8 +10,13 @@ Button{
     font-size: 20px;
 }
 p{
-    font-size: 86px;
+    font-size: 66px;
     padding: 2px;
     margin: 20px;
+
+}
+#result-el{
+    color: rgb(70, 212, 9);
+    font-size: 86px;
 
 }

@@ -39,7 +39,8 @@ function computerChoice(){
         randomComputerChoices = "Paper"
     }
     result()
-        
+    console.log(randomComputerChoices)
+    console.log(playerChoice) 
 }
 
 
@@ -48,6 +49,7 @@ function result(){
     
     if (randomComputerChoices == playerChoice){
         resultEl.textContent = "Tie!"
+
     } else if (playerChoice == "Rock"){
         if(randomComputerChoices == "Paper"){
             resultEl.textContent = "Computer 1Won";
@@ -62,7 +64,7 @@ function result(){
     }
     else if(playerChoice == "Scissors"){
         if(randomComputerChoices == "Rock"){
-            resultEl.textContent = "Computer 2Won";
+            resultEl.textContent = "Computer 1Won";
             computerScore++;
             computerScoreBoardEl.textContent = computerScore;
         }else{
@@ -85,5 +87,3 @@ function result(){
 }
 
 
-console.log(randomComputerChoices)
-console.log(playerChoice)
